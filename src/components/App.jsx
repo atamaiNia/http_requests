@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import { GlobalStyle } from './GlobalStyle';
-import { Layout } from './Layout';
+import { Container } from './Container';
 import { MaterialEditorForm } from './MaterialEditorForm/MaterialEditorForm';
 import { MaterialList } from './MaterialList/MaterialList';
 import * as API from 'services/api';
@@ -64,7 +64,7 @@ export class App extends Component {
   render() {
     const { materials, isLoading, error } = this.state;
     return (
-      <Layout>
+      <Container>
         <GlobalStyle />
         {error && (
           <p>
@@ -82,7 +82,7 @@ export class App extends Component {
             onUpdate={this.updateMaterial}
           />
         )}
-      </Layout>
+      </Container>
     );
   }
 }
